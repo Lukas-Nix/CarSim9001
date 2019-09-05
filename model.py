@@ -17,7 +17,7 @@ class Engine(object):
             self.theTank=Tank()
 
         def updateModel(self, dt):
-            if theTank > 0:
+            if self.theTank > 0:
                 self.currentRpm=self.throttlePosition*self.maxRpm
 
 class Gearbox(object):
