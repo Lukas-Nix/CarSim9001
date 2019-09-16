@@ -39,15 +39,15 @@ class Gearbox(object):
         self.wheels = {'frontLeft':Wheel(), 'frontRight':Wheel(), 'rearLeft':Wheel(), 'rearRight':Wheel()}
 
     def shiftUp(self):
-        if self.currentGear < len(self.gears) or self.clutchEngaged = True:
+        if self.currentGear < len(self.gears) or self.clutchEngaged == True:
             self.currentGear = self.currentGear +1
 
     def shiftDown(self):
-        if self.currentGear > 0 or self.clutchEngaged = True:
+        if self.currentGear > 0 or self.clutchEngaged == True:
             self.currentGear = self.currentGear -1
 
     def rotate(self, revolutions):
-        if self.clutchEngaged = True:
+        if self.clutchEngaged == True:
             for wheel in self.wheels:
                 self.wheels[wheel].rotate(revolutions*self.gears[self.currentGear])
 
