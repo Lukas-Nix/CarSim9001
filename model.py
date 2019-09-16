@@ -1,7 +1,11 @@
 from random import randint
 
 class Car(object):
-    pass
+    def __init__(self):
+        self.theEngine = Engine()
+
+    def updateModel(self,dt):
+        self.theEngine.updateModel(dt)
 
 class Wheel(object):
     def __init__(self):
