@@ -36,7 +36,7 @@ class Gearbox(object):
         self.gears = [0,0.8,1,1.4,2.2,3.8]
         self.currentGear = 0
         self.clutchEngaged = False
-        self.wheels = ['frontLeft':Wheel(), 'frontRight':Wheel(), 'rearLeft':Wheel(), 'rearRight':Wheel()]
+        self.wheels = {'frontLeft':Wheel(), 'frontRight':Wheel(), 'rearLeft':Wheel(), 'rearRight':Wheel()}
 
     def shiftUp(self):
         if self.currentGear < len(self.gears) or self.clutchEngaged = True:
