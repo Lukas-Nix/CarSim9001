@@ -44,11 +44,13 @@ class Gearbox(object): #Her er min gearbox klasse, som sørger for at gearboxen 
         if self.currentGear == (len(self.gears)-1) or self.clutchEngaged == True:
             pass #Så længe at den er på det højeste gear, eller at clutchen er slået til, så sker der ikke noget
         else:
-            self.currentGear = self.currentGear +1 #Ellers ligger den et til gearet
+            self.currentGear = self.currentGear +1 #Ellers ligger den en til gearet
 
     def shiftDown(self): #I denne funktion bliver gearet slået ned
-        if self.currentGear > 0 or self.clutchEngaged == True: #Så længe at gearet ikke er på nul, eller clutchen er slået til, så trækker den en fra gearet.
-            self.currentGear = self.currentGear -1
+        if self.currentGear > 0 or self.clutchEngaged == True: #Så længe at gearet ikke er på nul, eller clutchen er slået til, så sker der ikke noget
+            pass
+        else:
+            self.currentGear = self.currentGear -1 #ELlers trækker den en fra gearet
 
     def rotate(self, revolutions): #Denne del rotererer alle hjulene hvis clutchen er slået til
         if self.clutchEngaged == True:
